@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Favorite Animals</title>
+	<!-- CSS -->
+	<style type="text/css">
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<header>	
+		<h1>My Favorite Things</h1>
+		<!-- Primary Navigation -->
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="animals.html">Animals</a>
+				</li>
+				<li>
+					<a href="movies.html">Movies</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<hr>
+	<main>
+		<h2>Favorite Animals</h2>
+
+		<h3>img Element Demo</h3>
+
+		<!-- Absolute URL -->
+		<img src="https://images.unsplash.com/photo-1517423738875-5ce310acd3da?ixlib=rb-1.2.1&auto=format&fit=crop&w=2805&q=80" alt="Black pug looking smug in grey hoodie" width="650" height="804">
+
+		<!-- Relative URL. Make an images folder and insert a cat.jpg file in it for this link to work -->
+		<img src="images/cat.jpg" alt="Orange cat doing yoga" width="450" height="675">
+
+		<!-- NOTE: Only comment out one code section at a time for testing. Otherwise the browser will show the better quality image which was already downloaded, for all the code sections -->
+
+		<hr>
+
+		<h3>Responsive Images using HTML srcset & sizes Attributes</h3>
+
+		<!-- Image for comparison -->
+		<img src="images/cat-480.jpg" 
+			 alt="blue eyed cat" 
+			 width="480" height="320"
+		>
+
+		<!-- srcset with Display Density Descriptors -->
+		<!-- Comment in & out the below code for testing -->
+		<!-- <img src="images/cat-480.jpg" 
+			 alt="blue eyed cat" 
+			 width="480" height="320"
+			 srcset="
+			 images/cat-960.jpg 2x,
+			 images/cat-1440.jpg 3x,
+			 images/cat-1920.jpg 4x"
+		> -->
+
+		<!-- srcset with Width Descriptors -->
+		<!-- Comment in & out the below code for testing -->
+		<!-- <img src="images/cat-480.jpg" 
+			 alt="blue eyed cat" 
+			 width="480" height="320"
+			 srcset="
+			 images/cat-480.jpg 480w,
+			 images/cat-960.jpg 960w,
+			 images/cat-1440.jpg 1440w,
+			 images/cat-1920.jpg 1920w"
+		> -->
+
+		<!-- srcset & sizes together -->
+		<!-- Comment in & out the below code for testing -->
+		<img src="images/cat-480.jpg" 
+			 alt="blue eyed cat" 
+			 width="480" height="320"
+			 srcset="
+			 images/cat-480.jpg 480w,
+			 images/cat-960.jpg 960w,
+			 images/cat-1440.jpg 1440w,
+			 images/cat-1920.jpg 1920w"
+			 sizes="(max-width: 480px) 240px,
+			 		(max-width: 960px) 480px,
+					(max-width: 1440px) 960px,
+					1920px" 
+		>
+
+		<hr>
+
+		<!-- Picture element Demo -->
+		<h3>Responsive Images using HTML picture element</h3>
+		<picture>
+			<source srcset="images/cat-desktop.jpg" media="(min-width: 900px)">
+			<source srcset="images/cat-tablet.jpg" media="(min-width: 650px)">
+			<source srcset="images/cat-mobile.jpg">
+			<img src="images/cat-fallback.jpg" 
+				 alt="blue eyed cat" 
+				 width="480" height="320"
+			>
+		</picture>
+
+		<picture>
+		  <source srcset="images/elfDog.jpg" 
+		  		  media="(min-width: 900px)">
+		  <source srcset="images/sadDog.jpg" 
+		  	      media="(min-width: 650px)">
+		  <source srcset="images/bigearsDog.jpg">
+		  <img src="images/sadDog.jpg" 
+			   alt="dog" 
+			   width="480" height="480"
+		  >
+		</picture>
+
+		<picture>
+		  <source srcset="images/pokemon.gif">
+		  <source srcset="images/dragon.png">
+		  <source srcset="images/elfDog.jpg">
+		  <img src="pokemon.gif" 
+			   alt="pokemon" 
+			   width="250" height="382"
+		  >
+		</picture>
+
+		<picture>
+			<source media="(min-width: 900px)" 
+					srcset="
+							images/cat-desktop-950.jpg 950w,
+							images/cat-desktop-1300.jpg 1300w,
+							images/cat-desktop-1550.jpg 1550w,
+							images/cat-desktop-1920.jpg 1920w"
+			>
+
+			<source media="(min-width: 650px)" 
+					srcset="
+							images/cat-tablet-680.jpg 680w,
+							images/cat-tablet-900.jpg 900w,
+							images/cat-tablet-1300.jpg 1300w,
+							images/cat-tablet-1517.jpg 1517w"
+			>
+
+			<source 
+					srcset="
+							images/cat-mobile-350.jpg 350w,
+							images/cat-mobile-500.jpg 500w,
+							images/cat-mobile-700.jpg 700w,
+							images/cat-mobile-1111.jpg 1111w"
+					>
+
+			<img src="images/cat-480.jpg" 
+				 alt="blue eyed cat" 
+				 width="480" height="320"
+			>
+		</picture>
+
+		<!-- Figure & Figcaption Demo -->
+		<h3>Using figure & figcaption elements to give a caption to an image</h3>
+		<figure>
+		<img src="images/dogWorking.jpg" 
+			 alt="dog working on ipad" 
+			 width="480" height="320"
+		>
+		<figcaption>
+			Cookie, the dog, using an iPad to work on her latest project
+		</figcaption>
+	</figure>
+	</main>
+</body>
+</html>
