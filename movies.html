@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Favorite Movies</title>
+	<style type="text/css">
+		audio , video, iframe {
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<header>	
+		<h1>My Favorite Things</h1>
+		<!-- Primary Navigation -->
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="animals.html">Animals</a>
+				</li>
+				<li>
+					<a href="movies.html">Movies</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<hr>
+	<main>
+		<h2>Favorite Movies</h2>
+
+		<h3>Audio Element examples</h3>
+
+		<!-- Different audio formats -->
+		<audio controls>
+			<source src="media/electronica.mp3" type="audio/mpeg">
+			<source src="media/electronica.wav" type="audio/wav">
+			<source src="media/electronica.ogg" type="audio/ogg">
+			<p>Your browser does not support the audio element. Please update your browser</p>
+		</audio>
+
+		<!-- Audio loops endlessly -->
+		<audio src="media/bark.mp3" controls loop></audio>
+
+		<!-- Autoplays only on some browsers -->
+		<audio src="media/bark.mp3"  autoplay controls></audio>
+
+		<!-- Muted audio which can be toggled to unmute -->
+		<audio src="media/electronica.mp3" muted controls></audio>
+
+		<!-- Preload examples. Some are commented out -->
+		<audio src="media/electronica.mp3" preload="auto" controls></audio>
+
+		<!-- <audio src="media/electronica.mp3" preload="none" controls></audio> -->
+
+		<!-- <audio src="media/electronica.mp3" preload="metadata" controls></audio> -->
+
+		<h3>Video Element examples</h3>
+
+		<!-- Video loops endlessly -->
+		<video src="media/palawanFull.mp4" 
+			   controls width="480" height="270" 
+			   loop
+		>
+		</video>
+
+		<!-- Different video formats -->
+		<video controls 
+			   width="480" height="270"
+		>
+			<source src="media/palawanFull.mp4" type="video/mp4">
+			<source src="media/palawanFull.webm" type="video/webm">
+			<source src="media/palawanFull.ogg" type="video/ogg">
+
+			<p>Your browser doesn't support HTML5 video.</p>
+		</video>
+
+		<!-- Closed captions for video. Works only when the webpage is hosted. Refer palawan.vtt file in media folder -->
+		<video src="media/palawanFull.mp4" 
+			   controls 
+			   width="480" height="270">
+			<track kind="captions" 
+				   src="media/palawan.vtt"
+				   srclang="en"
+				   label="English"
+				   default
+			>
+		</video>
+
+		<!-- Embedding YouTube video. This video autoplays on mute & loops endlessly -->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/EOmQXGrEMGs?autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
