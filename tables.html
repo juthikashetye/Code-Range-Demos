@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tables in HTML</title>
+	<style type="text/css">
+		table {
+		    border: 2px solid rgb(200, 200, 200);
+		    margin-bottom: 20px;
+		}
+
+		td,th {
+	    	border: 1px solid rgb(190, 190, 190);
+	    	padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>HTML Tables</h1>
+
+	<!-- Caption above all table elements (displayed above table always) -->
+	<table>
+		<caption>Monthly Savings</caption>
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$50</td>
+		</tr>
+		<tr>
+			<td>February</td>
+			<td>$100</td>
+		</tr>
+		<tr>
+			<td>March</td>
+			<td>$20</td>
+		</tr>
+	</table>
+
+	<!-- Caption below all table elements (displayed above table always) -->
+	<table>
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$50</td>
+		</tr>
+		<tr>
+			<td>February</td>
+			<td>$100</td>
+		</tr>
+		<tr>
+			<td>March</td>
+			<td>$20</td>
+		</tr>
+		<caption>Monthly Savings</caption>
+	</table>
+
+	<table>
+		<caption>Using thead, tbody & tfoot elements</caption>
+		<thead>
+			<tr>
+				<th>Month</th>
+				<th>Savings</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>January</td>
+				<td>$50</td>
+			</tr>
+			<tr>
+				<td>February</td>
+				<td>$100</td>
+			</tr>
+			<tr>
+				<td>March</td>
+				<td>$20</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>Total Savings</th>
+				<td>$170</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<table>
+		<caption>rowspan Example</caption>
+		<tr>
+			<th>Name</th>
+			<th>Favorite Fruit</th>
+		</tr>
+		<tr>
+			<td rowspan="2">John</td>
+			<td>Orange</td>
+		</tr>
+		<tr>
+			<td>Mango</td>
+		</tr>
+		<tr>
+			<td>Dan</td>
+			<td>Watermelon</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Tina</td>
+			<td>Strawberry</td>
+		</tr>
+		<tr>
+			<td>Litchi</td>
+		</tr>
+	</table>
+
+	<table >
+		<caption>colspan Example</caption>
+			<tr>
+				<th>Month</th>
+				<th>Savings</th>
+			</tr>
+			<tr>
+				<td>January</td>
+				<td>$50</td>
+			</tr>
+			<tr>
+				<td>February</td>
+				<td>$100</td>
+			</tr>
+			<tr>
+				<td>March</td>
+				<td>$20</td>
+			</tr>
+			<tr>
+				<th colspan="2">Total Savings : $170</th>	
+			</tr>
+	</table>
+</body>
+</html>
