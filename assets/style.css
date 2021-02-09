@@ -1,0 +1,36 @@
+form{
+	margin: 2%;
+}
+
+*{
+	box-sizing: border-box
+}
+
+label{
+	display: block;
+}
+
+.checkbox, .radio{
+	display: inline-block;
+	width: initial;
+}
+
+input, select{
+	display: inline-block;
+	margin: 0 0 20px 0;
+}
+
+input[type=submit]{
+	padding: 10px;
+	margin-left: 50%;
+}
+
+button{
+	padding: 10px;
+}
+
+fieldset{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding: 1%;
+}
